@@ -29,23 +29,23 @@ client.user.setGame(`Nothing`,"http://twitch.tv/S-F")
 });
 
 const adminprefix = "+";
-const devs = ['489342754887827487'];
+const devs = ['464046823162511400'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
     
 if (message.content.startsWith(adminprefix + 'setgame')) {
   client.user.setGame(argresult);
-    message.channel.sendMessage(`**${argresult} تم تغيير بلاينق البوت إلى **`)
+    message.channel.sendMessage(`**${argresult} تم تغيير بلاينق الحساب إلى **`)
 } else 
   if (message.content.startsWith(adminprefix + 'setname')) {
 client.user.setUsername(argresult).then
-    message.channel.sendMessage(`**${argresult}** : تم تغيير أسم البوت إلى`)
+    message.channel.sendMessage(`**${argresult}** : تم تغيير أسم الحساب إلى`)
 return message.reply("**لا يمكنك تغيير الاسم يجب عليك الانتظآر لمدة ساعتين . **");
 } else
 if (message.content.startsWith(adminprefix + 'setstreem')) {
   client.user.setGame(argresult, "https://www.twitch.tv/idk");
-    message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)
+    message.channel.sendMessage(`**تم تغيير تويتش الحساب إلى  ${argresult}**`)
 }
 
 });
@@ -53,7 +53,7 @@ if (message.content.startsWith(adminprefix + 'setstreem')) {
 client.on('message',function(message) {
     let args = message.content.split(" ").slice(1).join(" ");
    if(message.content.startsWith(adminprefix + "setWatch")) {
-       if(message.author.id !== '489342754887827487') return;
+       if(message.author.id !== '464046823162511400') return;
        client.user.setActivity(args,{type: 'WATCHING'});
        message.channel.send("**- :white_check_mark: Done!,**");
    } 
@@ -61,7 +61,7 @@ client.on('message',function(message) {
 client.on('message',function(message) {
     let args = message.content.split(" ").slice(1).join(" ");
    if(message.content.startsWith(adminprefix + "setListen")) {
-       if(message.author.id !== '489342754887827487') return;
+       if(message.author.id !== '464046823162511400') return;
        client.user.setActivity(args,{type: 'LISTENING'});
        message.channel.send("**- :white_check_mark: Done!,**");
    } 
